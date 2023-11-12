@@ -198,7 +198,7 @@ if [[ $BUILDX == true ]]; then
 	done
 	echo "Done!"
 else
-	arch=amd64
+	arch=arm64
 	docker build -t $REPO/$IMAGENAME-${arch}:$VERSION -t $REPO/$IMAGENAME-${arch}:latest .
 	if [ $? -eq 0 ]; then
 		echo "Build successful, pushing to $REPO/$IMAGENAME-${arch} ..."
